@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Context context = getApplicationContext();
 
-                if (nota1.getText().toString().isEmpty() == true || nota2.getText().toString().isEmpty() == true || nota3.getText().toString().isEmpty() == true) {
-                    Toast.makeText(context, "Ingresaste campos en blancos", Toast.LENGTH_LONG).show();
+                if (nota1.getText().toString().isEmpty() == true || nota2.getText().toString().isEmpty() == true || nota3.getText().toString().isEmpty() == true || Float.valueOf(nota1.getText().toString()) > 5 || Float.valueOf(nota2.getText().toString()) > 5 || Float.valueOf(nota3.getText().toString()) > 5) {
+                    Toast.makeText(context, "Ingrese correctamente los campos", Toast.LENGTH_LONG).show();
                 } else {
                     float total = (Float.parseFloat(nota1.getText().toString()) + Float.parseFloat(nota2.getText().toString()) + Float.parseFloat(nota3.getText().toString())) / 4;
 
